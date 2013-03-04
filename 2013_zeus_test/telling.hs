@@ -1,4 +1,3 @@
--- Example solution for the balans assignment VPW 2013
 -- (C) 2013 Andy Georges
 --
 -------------------------------------------------------

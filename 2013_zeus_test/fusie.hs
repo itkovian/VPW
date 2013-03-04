@@ -12,7 +12,7 @@ import           Data.List
 import           Debug.Trace
 
 
-transform :: S.Set Int -> Int -> S.Set Int -> S.Set Int -> Bool
+transform :: S.Set Int -> Int -> S.Set Int -> S.Set Int -> S.Set Int
 transform all t av s
     | S.member t s = True
     | S.null s' = False
@@ -29,7 +29,7 @@ solve m = do
     targets <- words `fmap` getLine
 
     let av = S.fromList $ map (\e -> fromJust $ M.lookup e m) available
-        ts = map (\e -> fromJust $ M.lookup e m) targets
+        ts = sort $ map (\e -> fromJust $ M.lookup e m) targets
         all = S.fromList $ M.elems m
 
 
